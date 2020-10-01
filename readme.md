@@ -1,4 +1,15 @@
 # XF-Event-Extraction
+2020
+科大讯飞事件抽取挑战赛
+
+比赛链接：http://challenge.xfyun.cn/topic/info?type=hotspot
+
+
+结果:
+| Name     | Score |  Rank|Team member| 
+| :--------|:------|:----|:----------|
+|我是蛋糕王 | 0.73859| 1   |https://github.com/WuHuRestaurant<br>https://github.com/aker218|
+
 
 事件抽取系统，包含触发词（trigger），事件论元（role），事件属性（attribution）的抽取。基于 pytorch 的 pipeline 解决方案。
 
