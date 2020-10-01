@@ -186,7 +186,7 @@ bash ./script/final/test.sh
 * **role2_ckpt_dir：**                 role2 所在的文件夹
 * **attribution_ckpt_dir： **    attribution所在的文件夹
 
-## 测试效果 （在 DuIE2.0 dev.json 上测试）
+## 测试效果 
 
 |     classification      |    score    |
 | :---------------------: | :---------: |
