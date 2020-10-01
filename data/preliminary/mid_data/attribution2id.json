@@ -1,0 +1,20 @@
+{
+  "O": 0,
+  "B-object": 1,
+  "B-subject": 2,
+  "B-time": 3,
+  "B-location": 4,
+  "I-object": 5,
+  "I-subject": 6,
+  "I-time": 7,
+  "I-location": 8,
+  "E-object": 9,
+  "E-subject": 10,
+  "E-time": 11,
+  "E-location": 12,
+  "S-object": 13,
+  "S-subject": 14,
+  "S-time": 15,
+  "S-location": 16,
+  "X": 17
+}
