@@ -215,7 +215,7 @@ bash ./script/final/test.sh
 | submit_v1_ensemble.json | **0.73859** |
 
 ### 各阶段提升
-<div align=center><img width="400" height="300" alt="res" src="./imgs/res.png"/></div>
+<div align=center><img width="500" height="250" alt="res" src="./imgs/res.png"/></div>
 
 ---
 ### 数据增强
