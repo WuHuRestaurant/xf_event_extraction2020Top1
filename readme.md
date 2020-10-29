@@ -205,7 +205,7 @@ bash ./script/final/test.sh
 * **trigger_ckpt_dir**：              trigger 所在的文件夹
 * **role1_ckpt_dir**：                 role1 所在的文件夹
 * **role2_ckpt_dir：**                 role2 所在的文件夹
-* **attribution_ckpt_dir： **    attribution所在的文件夹
+* **attribution_ckpt_dir：**    attribution所在的文件夹
 
 ## 测试效果 
 
