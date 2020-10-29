@@ -38,7 +38,7 @@ role 采用的特征是**trigger的相对距离**，然后采用了苏神的 **C
 
 ### attribution 分类器：
 attribution 分类器并没有进行特殊优化，采用了一个**动态窗口**的方法，我们认为某一 trigger 的 tense & polarity 只与其附近的语境有关，因此我们设定了一个窗口，对该窗口内进行 pooling 操作，然后利用 pooling 后的 logits 进行多任务学习，同时分类出 tense 和 polarity。因属性数据类别不均及其严重，最后我们用 ERNIE 模型做了一个10折交叉验证，有较大的提升。
-<div align=center><img width="400" height="300" alt="role" src="./imgs/attribution.png"/></div>
+<div align=center><img width="400" height="300" alt="attribution" src="./imgs/attribution.png"/></div>
 
 ### 数据增强：
 本次比赛主要的上分点在于数据增强的工作，初赛和复赛数据的分布差别极大，一起训练反而会导致结果下降。因此我们做了一个初赛数据筛选的工作，筛选出与复赛数据分布相近的数据进行增量训练。主要流程详见PPT中**基于标签验证的数据增强部分**。
@@ -213,6 +213,9 @@ bash ./script/final/test.sh
 | :---------------------: | :---------: |
 |     submit_v1.json      |   0.73684   |
 | submit_v1_ensemble.json | **0.73859** |
+
+### 各阶段提升
+<div align=center><img width="400" height="300" alt="res" src="./imgs/res.png"/></div>
 
 ---
 ### 数据增强
