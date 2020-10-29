@@ -24,7 +24,7 @@
 最后将识别的结果进行整合，得到提交文件。
 
 ### pipeline 思路如下：
-![image](./imgs/pipeline.png){:height="33%" width="33%"}
+<div align=center><img width="250" height="250" alt="pipeline" src="./imgs/pipeline.png"/></div>
 
 ### trigger 提取器：
 trigger 提取采用的特征是**远程监督 trigger**，把所有标注数据当做一个知识库，对当前文本进行匹配。注：在训练时，需要排除自身的label，我们采用的是KFold的训练集 distant trigger 构造，即将训练集分成K份，用前K-1份的所有label当做后一份的知识库，构造训练数据的distant trigger；test 时候采用所有 trigger。
