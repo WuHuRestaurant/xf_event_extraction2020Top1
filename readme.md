@@ -132,7 +132,7 @@ xf_ee
 
 ### 数据转换
 
-数据转换部分只提供代码和已经转换好的数据，具体操作在 **src_final/preprocess **中的 convert_raw_data中，包含对初赛/复赛数据的清洗和转换。
+数据转换部分只提供代码和已经转换好的数据，具体操作在 **src_final/preprocess**中的 convert_raw_data中，包含对初赛/复赛数据的清洗和转换。
 
 ### 训练阶段
 
