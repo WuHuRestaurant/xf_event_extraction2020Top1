@@ -24,21 +24,21 @@
 最后将识别的结果进行整合，得到提交文件。
 
 ### pipeline 思路如下：
-<div align=center><img width="250" height="250" alt="pipeline" src="./imgs/pipeline.png"/></div>
+<div align=center><img width="300" height="400" alt="pipeline" src="./imgs/pipeline.png"/></div>
 
 ### trigger 提取器：
 trigger 提取采用的特征是**远程监督 trigger**，把所有标注数据当做一个知识库，对当前文本进行匹配。注：在训练时，需要排除自身的label，我们采用的是KFold的训练集 distant trigger 构造，即将训练集分成K份，用前K-1份的所有label当做后一份的知识库，构造训练数据的distant trigger；test 时候采用所有 trigger。
 在测试时若出现预测为空，选取 distant trigger logits 最大的解码输出 trigger。
 具体模型如下：
-![image](./imgs/trigger.png)
+<div align=center><img width="300" height="400" alt="trigger" src="./imgs/trigger.png"/></div>
 
 ### role 提取器：
 role 采用的特征是**trigger的相对距离**，然后采用了苏神的 **Conditional Layer Norm** 来让整个句子融入 trigger 信息，同样采用 Span 解码的方式。由于数据中 subject/object 分布相似，同时与 time/loc 分布相差很大，我们进一步进行了优化，将前两者和后两者的抽取分开，防止 time/loc 的数据对 subject/object 的 logits 稀疏化。
-![image](./imgs/role.png)
+<div align=center><img width="300" height="400" alt="role" src="./imgs/role.png"/></div>
 
 ### attribution 分类器：
 attribution 分类器并没有进行特殊优化，采用了一个**动态窗口**的方法，我们认为某一 trigger 的 tense & polarity 只与其附近的语境有关，因此我们设定了一个窗口，对该窗口内进行 pooling 操作，然后利用 pooling 后的 logits 进行多任务学习，同时分类出 tense 和 polarity。因属性数据类别不均及其严重，最后我们用 ERNIE 模型做了一个10折交叉验证，有较大的提升。
-![image](./imgs/attribution.png)
+<div align=center><img width="300" height="400" alt="role" src="./imgs/attribution.png"/></div>
 
 ### 数据增强：
 本次比赛主要的上分点在于数据增强的工作，初赛和复赛数据的分布差别极大，一起训练反而会导致结果下降。因此我们做了一个初赛数据筛选的工作，筛选出与复赛数据分布相近的数据进行增量训练。主要流程详见PPT中**基于标签验证的数据增强部分**。
