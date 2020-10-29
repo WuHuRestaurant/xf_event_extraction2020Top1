@@ -119,9 +119,10 @@ xf_ee
 │   │   ├── options.py                      # 命令行参数
 │   |   └── trainer.py                      # 训练器
 |
+├── 答辩PPT                                 # 决赛PPT
 ├── dev.py                                  # 用于模型评估
 ├── ensemble_predict.py                     # 用百度 ERNIE 模型对 attribution 十折交叉验证
-├── predict_preliminary.py                   # 对初赛数据进行清洗
+├── predict_preliminary.py                  # 对初赛数据进行清洗
 ├── readme.md                               # ...
 ├── test.py                                 # pipeline 预测复赛数据 （包含 ensemble）
 └── train.py                                # 模型训练
