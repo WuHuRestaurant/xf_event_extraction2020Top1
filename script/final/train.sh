@@ -9,9 +9,9 @@ export MID_DATA_DIR="./data/final/mid_data"
 export AUX_DATA_DIR="./data/final/preliminary_clean"
 export OUTPUT_DIR="./out"
 
-export MODE="stack"
+export MODE="train"
 
-export TASK_TYPE="attribution"
+export TASK_TYPE="role1"
 
 export GPU_IDS="0"
 
