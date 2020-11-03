@@ -124,8 +124,8 @@ def swa(model, model_dir, swa_start=1):
     """
     model_path_list = get_model_path_list(model_dir)
 
-    assert 1 <= swa_start < len(model_path_list) - 1, \
-        f'Using swa, swa start should smaller than {len(model_path_list) - 1} and bigger than 0'
+#     assert 1 <= swa_start < len(model_path_list) - 1, \
+#         f'Using swa, swa start should smaller than {len(model_path_list) - 1} and bigger than 0'
 
     swa_model = copy.deepcopy(model)
     swa_n = 0.
