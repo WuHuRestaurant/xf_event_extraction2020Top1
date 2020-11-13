@@ -287,5 +287,5 @@ if __name__ == '__main__':
     # 获取单模型结果
     pipeline_predict(args)
 
-    # 获取 attribution 中十折交叉验证的结果
-    ensemble_attribution(args.version)
+#     # 获取 attribution 中十折交叉验证的结果
+#     ensemble_attribution(args.version)
