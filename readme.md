@@ -144,6 +144,8 @@ bash ./script/final/train.sh
 
 **如果设备显存不够，自行调整 train_batch_size，脚本中的 batch_size（32）在上述环境中占用显存为16G**
 
+**最终训练的结果是每一个 epoch 下存一次，线下评估结果在 eval_metric.txt 下，保留最优线下结果作为训练结果，其余删掉即可**
+
 可更改的公共参数有
 
 ```
