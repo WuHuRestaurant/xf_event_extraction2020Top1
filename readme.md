@@ -1,5 +1,5 @@
 # XF-Event-Extraction
-天池中医药NER冠军方案已经开源，欢迎star
+## 天池中医药NER冠军方案已经开源，欢迎star
 
 项目链接：https://github.com/z814081807/DeepNER
 
