@@ -1,4 +1,8 @@
 # XF-Event-Extraction
+天池中医药NER冠军方案已经开源，欢迎star
+
+项目链接：https://github.com/z814081807/DeepNER
+
 2020
 科大讯飞事件抽取挑战赛
 
