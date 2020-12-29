@@ -4,4 +4,3 @@ numpy==1.16.4
 torch==1.5.1+cu101
 tqdm==4.46.1
 scikit_learn==0.23.2
-torchcrf==1.1.0
