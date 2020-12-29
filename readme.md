@@ -144,7 +144,7 @@ xf_ee
 bash ./script/final/train.sh
 ```
 
-注：**脚本中指定的 BERT_DIR 指BERT所在文件夹，BERT采用的是哈工大的全词覆盖wwm模型，下载地址https://github.com/ymcui/Chinese-BERT-wwm，自行下载并制定对应文件夹，并将 vocab.txt 中的两个 unused 改成 [INV] 和 [BLANK]（详见 processor 代码中的 fine_grade_tokenize）**
+注：**脚本中指定的 BERT_DIR 指BERT所在文件夹，BERT采用的是哈工大的全词覆盖wwm模型，下载地址 https://github.com/ymcui/Chinese-BERT-wwm ，自行下载并制定对应文件夹，并将 vocab.txt 中的两个 unused 改成 [INV] 和 [BLANK]（详见 processor 代码中的 fine_grade_tokenize）**
 
 **如果设备显存不够，自行调整 train_batch_size，脚本中的 batch_size（32）在上述环境中占用显存为16G**
 
